@@ -1,3 +1,9 @@
 [gd_scene format=3 uid="uid://ca4cki40njuaa"]
 
 [node name="Menu" type="Node2D" unique_id=229342295]
+
+[node name="Titulo" type="RichTextLabel" parent="." unique_id=584227539]
+offset_left = 299.0
+offset_top = 46.0
+offset_right = 790.0
+offset_bottom = 215.0
