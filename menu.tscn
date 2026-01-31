@@ -1,9 +1,119 @@
-[gd_scene format=3 uid="uid://ca4cki40njuaa"]
+[gd_scene load_steps=10 format=3 uid="uid://ca4cki40njuaa"]
 
-[node name="Menu" type="Node2D" unique_id=229342295]
+[ext_resource type="Script" uid="uid://bi7gas08n7nw5" path="res://menu.gd" id="1_ecwwl"]
+[ext_resource type="Texture2D" uid="uid://pihe0g67wsp8" path="res://sprites/fundo.png" id="2_kk3ma"]
+[ext_resource type="Texture2D" uid="uid://dh2m17ygn8s7k" path="res://sprites/Gemini_Generated_Image_wmz2zuwmz2zuwmz2.png" id="3_ecwwl"]
+[ext_resource type="Texture2D" uid="uid://cnrnd5jsdf7kb" path="res://sprites/m1.png" id="3_nrnbx"]
+[ext_resource type="Texture2D" uid="uid://cssf0plkbg0rf" path="res://sprites/m2.png" id="4_iqepy"]
+[ext_resource type="Texture2D" uid="uid://bolvpmqerd2wl" path="res://sprites/m3.png" id="5_h1wq0"]
+[ext_resource type="Texture2D" uid="uid://mmn7ljblyscp" path="res://sprites/m4.png" id="6_dwrpx"]
+[ext_resource type="AudioStream" uid="uid://d3baqvf54dj5p" path="res://sons/018136_funny-music-orchestra-wav-54828.mp3" id="8_kk3ma"]
 
-[node name="Titulo" type="RichTextLabel" parent="." unique_id=584227539]
-offset_left = 299.0
-offset_top = 46.0
-offset_right = 790.0
-offset_bottom = 215.0
+[sub_resource type="SpriteFrames" id="SpriteFrames_jspdm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_nrnbx")
+}],
+"loop": true,
+"name": &"m1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_iqepy")
+}],
+"loop": true,
+"name": &"m2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_h1wq0")
+}],
+"loop": true,
+"name": &"m3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_dwrpx")
+}],
+"loop": true,
+"name": &"m4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_nrnbx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_iqepy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_h1wq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_dwrpx")
+}],
+"loop": true,
+"name": &"multi",
+"speed": 5.0
+}]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_ecwwl")
+
+[node name="Fundo" type="Sprite2D" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(576.5, 323.375)
+scale = Vector2(58.65, 44.35)
+texture = ExtResource("2_kk3ma")
+metadata/_edit_lock_ = true
+
+[node name="Titulo" type="RichTextLabel" parent="."]
+self_modulate = Color(1, 1, 1, 0.678431)
+offset_left = 113.0
+offset_top = 12.0
+offset_right = 1117.0
+offset_bottom = 181.0
+theme_override_font_sizes/normal_font_size = 100
+text = "Escondendo o Jogo"
+
+[node name="GeminiGeneratedImageWmz2Zuwmz2Zuwmz2" type="Sprite2D" parent="."]
+position = Vector2(548, 529)
+scale = Vector2(0.450195, 0.419922)
+texture = ExtResource("3_ecwwl")
+
+[node name="mascaras" type="AnimatedSprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.556863)
+position = Vector2(570, 258)
+scale = Vector2(0.763711, 0.607143)
+sprite_frames = SubResource("SpriteFrames_jspdm")
+animation = &"multi"
+autoplay = "multi"
+frame_progress = 0.618103
+
+[node name="018136Funny-music-orchestra-wav-54828" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(525, 372)
+stream = ExtResource("8_kk3ma")
+autoplay = true
+
+[node name="Titulo2" type="RichTextLabel" parent="."]
+self_modulate = Color(1, 1, 1, 0.278431)
+offset_left = 431.0
+offset_top = 193.0
+offset_right = 708.0
+offset_bottom = 333.0
+theme_override_font_sizes/normal_font_size = 100
+text = "Start"
+
+[node name="Button2" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -8.0
+offset_top = -74.0
+offset_right = 1162.0
+offset_bottom = 662.0
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

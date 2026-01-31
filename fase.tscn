@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://csok6nrnkeh5s"]
+
+[ext_resource type="Texture2D" uid="uid://b0ygtodwwiya3" path="res://sprites/unnamed.jpg" id="1_4o364"]
+[ext_resource type="AudioStream" uid="uid://dp4ov5cseflct" path="res://sons/old-broken-music-box-sound-effect-386717.mp3" id="2_ihpo2"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Unnamed" type="Sprite2D" parent="."]
+position = Vector2(573.25, 380.75)
+scale = Vector2(1.11865, 0.723145)
+texture = ExtResource("1_4o364")
+metadata/_edit_lock_ = true
+
+[node name="Old-broken-music-box-sound-effect-386717" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(396, 508)
+stream = ExtResource("2_ihpo2")
+autoplay = true
