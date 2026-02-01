@@ -1,21 +1,35 @@
 extends PathFollow2D
 
-@export var velocidade: float = 150.0
-var mudou_arte: bool = false
+@export var velocidade: float = 190.0
 
-func _process(delta: float):
+var estado_atual := -1
 
+func _process(delta):
 	progress += velocidade * delta
-	
-	if progress_ratio >= 0.7 and not mudou_arte:
-		mudar_comportamento()
-		mudou_arte = true
+
+	var novo_estado := calcular_estado()
+	if novo_estado != estado_atual:
+		estado_atual = novo_estado
+		aplicar_animacao(estado_atual)
 
 	if progress_ratio >= 1.0:
 		queue_free()
 
-func mudar_comportamento():
-	$AnimatedSprite2D.animation = "up"
-	
-	if has_node("AnimationPlayer"):
-		$AnimationPlayer.play("up")
+
+func calcular_estado() -> int:
+	if progress_ratio < 0.33:
+		return 0
+	elif progress_ratio < 0.76:
+		return 1
+	else:
+		return 2
+
+
+func aplicar_animacao(estado: int) -> void:
+	match estado:
+		0:
+			$anisold.play("down")
+		1:
+			$anisold.play("anda")
+		2:
+			$anisold.play("up")
