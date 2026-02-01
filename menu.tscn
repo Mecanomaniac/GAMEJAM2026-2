@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ca4cki40njuaa"]
+[gd_scene format=3 uid="uid://ca4cki40njuaa"]
 
 [ext_resource type="Script" uid="uid://bi7gas08n7nw5" path="res://menu.gd" id="1_ecwwl"]
 [ext_resource type="Texture2D" uid="uid://pihe0g67wsp8" path="res://sprites/fundo.png" id="2_kk3ma"]
@@ -61,54 +61,57 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Menu" type="Node2D"]
+[node name="Menu" type="Node2D" unique_id=257459520]
 script = ExtResource("1_ecwwl")
 
-[node name="Fundo" type="Sprite2D" parent="."]
+[node name="Fundo" type="Sprite2D" parent="." unique_id=1321438970]
 self_modulate = Color(0, 0, 0, 1)
-position = Vector2(576.5, 323.375)
-scale = Vector2(58.65, 44.35)
+position = Vector2(639.49994, 359.5)
+scale = Vector2(63.95001, 48.066666)
 texture = ExtResource("2_kk3ma")
-metadata/_edit_lock_ = true
 
-[node name="Titulo" type="RichTextLabel" parent="."]
+[node name="Titulo" type="RichTextLabel" parent="." unique_id=2145753731]
 self_modulate = Color(1, 1, 1, 0.678431)
-offset_left = 113.0
-offset_top = 12.0
-offset_right = 1117.0
-offset_bottom = 181.0
+offset_left = 189.0
+offset_top = 40.0
+offset_right = 1099.0
+offset_bottom = 209.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_font_sizes/normal_font_size = 100
 text = "Escondendo o Jogo"
 
-[node name="GeminiGeneratedImageWmz2Zuwmz2Zuwmz2" type="Sprite2D" parent="."]
-position = Vector2(548, 529)
+[node name="GeminiGeneratedImageWmz2Zuwmz2Zuwmz2" type="Sprite2D" parent="." unique_id=1083204959]
+position = Vector2(628, 584)
 scale = Vector2(0.450195, 0.419922)
 texture = ExtResource("3_ecwwl")
 
-[node name="mascaras" type="AnimatedSprite2D" parent="."]
+[node name="mascaras" type="AnimatedSprite2D" parent="." unique_id=1780265863]
 self_modulate = Color(1, 1, 1, 0.556863)
-position = Vector2(570, 258)
+position = Vector2(619, 314)
 scale = Vector2(0.763711, 0.607143)
 sprite_frames = SubResource("SpriteFrames_jspdm")
 animation = &"multi"
 autoplay = "multi"
 frame_progress = 0.618103
 
-[node name="018136Funny-music-orchestra-wav-54828" type="AudioStreamPlayer2D" parent="."]
+[node name="018136Funny-music-orchestra-wav-54828" type="AudioStreamPlayer2D" parent="." unique_id=325738765]
 position = Vector2(525, 372)
 stream = ExtResource("8_kk3ma")
 autoplay = true
 
-[node name="Titulo2" type="RichTextLabel" parent="."]
+[node name="Titulo2" type="RichTextLabel" parent="." unique_id=1096679051]
 self_modulate = Color(1, 1, 1, 0.278431)
-offset_left = 431.0
-offset_top = 193.0
-offset_right = 708.0
-offset_bottom = 333.0
+offset_left = 499.0
+offset_top = 258.0
+offset_right = 747.0
+offset_bottom = 398.0
 theme_override_font_sizes/normal_font_size = 100
 text = "Start"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Button2" type="Button" parent="."]
+[node name="Button2" type="Button" parent="." unique_id=820307156]
 self_modulate = Color(1, 1, 1, 0)
 offset_left = -8.0
 offset_top = -74.0

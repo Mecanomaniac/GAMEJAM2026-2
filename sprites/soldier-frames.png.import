@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cssf0plkbg0rf"
-path="res://.godot/imported/m2.png-d39c2977843b0648c977a2e2dd728bfb.ctex"
+uid="uid://mukhwyd1eb6y"
+path="res://.godot/imported/soldier-frames.png-ed031d96f6bb89822689a2a6fa8f5cbe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/m2.png"
-dest_files=["res://.godot/imported/m2.png-d39c2977843b0648c977a2e2dd728bfb.ctex"]
+source_file="res://sprites/soldier-frames.png"
+dest_files=["res://.godot/imported/soldier-frames.png-ed031d96f6bb89822689a2a6fa8f5cbe.ctex"]
 
 [params]
 
